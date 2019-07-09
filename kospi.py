@@ -12,7 +12,11 @@ docu=bs4.BeautifulSoup(page,'html.parser')
 #kospi=docu.select_one('.box > li:nth-child(1) > span:nth-child(2) > em:nth-child(1)').text
 kosdoc=docu.select('html body div#PM_ID_ct.wrap div.header div.section_navbar div.area_hotkeyword.PM_CL_realtimeKeyword_base div.ah_list.PM_CL_realtimeKeyword_list_base ul.ah_l li.ah_item a.ah_a span.ah_k')
 
+b=[]
+for item in kosdoc:
+    b+=item
 
+print(b)
 
 # print(type(kosdoc))
 
@@ -24,4 +28,8 @@ kosdoc=docu.select('html body div#PM_ID_ct.wrap div.header div.section_navbar di
 # for i in range(10):
 #     print("{0}위 검색어 : {1}".format(i+1,kosdoc[i]))
 
-print(kosdoc)
+# print(kosdoc)
+
+# for item in kosdoc:
+#     print(kosdoc)
+
