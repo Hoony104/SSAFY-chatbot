@@ -40,6 +40,9 @@
 ---
 
 - `from flask import Flask, render_template` :  `import flask` 만 작성 시, `flask.` 을 앞에 붙여줘야함
+- `app = Flask(__name__)`
+
+
 
 `@app.route("/주소")`  : url 주소 설정 (변수 입력 필요시 < 변수 >)
 
