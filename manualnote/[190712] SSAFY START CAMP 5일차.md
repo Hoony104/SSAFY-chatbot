@@ -46,7 +46,7 @@ URL로 메시지 보내기 가능 --> 파이썬으로 구현
 
 /sendmessage
 
-? 파라미터
+`?`  : 파라미터
 
 
 
@@ -62,7 +62,7 @@ requests 는 response를 받게됨.  print하면 response 200/    .text로 출�
 
 
 
-
+## 키 숨기기
 
 키 숨기기?  os단계에서 환경변수로?
 
@@ -158,7 +158,7 @@ http://localhost:5000/
 
 telegram에 request 하는 포멧.
 
-`https://api.telegram.org/bot{token}/method`
+`https://api.telegram.org/bot{token}/ (method)`
 
 ---
 
