@@ -29,5 +29,5 @@ while winnum==0:
         trynum+=1
 print(f'{trynum}번만에 성공')
 
-
+## count = len(set(winner)&set(your_lotto))
 
