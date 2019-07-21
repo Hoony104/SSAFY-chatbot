@@ -32,6 +32,8 @@
 
 
 
+## 랜덤직업 Faker
+
 pip install Faker
 
 - `from faker import Faker`

@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import requests
 import random
+from datetime import datetime
 
 app=Flask(__name__)
 
@@ -52,7 +53,22 @@ def lottery():
 
     return render_template('lottery.html', sug=sug, result=result)
 
-        
+@app.route("/newyear")
+def newyear():
+    month = datetime.now().month
+    day = datetime.now().day
+    today = datetime.now()
+    if month == 1 and day == 1:
+        return "<h1>yeppp</h1>" + str(today)
+    else:
+        return "<h1>Noppp</h1>" + str(today)
+
+# /index
+@app.route('/index')
+def index():
+    return '<html><head><body><h1>홈페이지</h1><p>이건 내용</p></body></head></html>'
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

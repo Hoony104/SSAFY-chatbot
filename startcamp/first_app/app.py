@@ -3,8 +3,6 @@ import random
 import requests
 import bs4
 from datetime import datetime
-
-
 app = Flask(__name__)
 
 #1. 주문 받는 방식(어떻게)
@@ -35,7 +33,7 @@ def cube(vari):
 def lotto():
     r=sorted(random.sample(range(1,46),6))
     R=''
-    J=''
+    # J=''
     for item in r:
         R+=str(item)
         R+=','

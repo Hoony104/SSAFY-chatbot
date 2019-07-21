@@ -1,21 +1,4 @@
-#### 추천
-
-- 칸 아카데미 스쿨
-- y combinator
-- 버클리 cs162, software engineering --> edx   agile development using ruby on rails  :  데이비드 패터슨?
-- 프로그래머스??? 개발자 채용 / 코딩테스트
-
-
-
-# https://github.com/sspy21/   -> 강의코드
-
-
-
-
-
 # [190710] SSAFY START CAMP 3일차 
-
-텔레그램이 목표!? 영화추천프로그램??
 
 
 
