@@ -764,3 +764,63 @@ list(filter(even,numbers))
 프로젝트 진행.
 
 VS code에서 excel viewer 설치!
+
+
+
+```python
+# lunch.csv 데이터저장
+with open('lunch.csv', 'w', encoding='utf-8', newline='') as f:
+    for k,v in lunch.items():
+        f.write(f'{k} : {v}\n')
+
+#',' join을 통해 string 만들기
+with open('lunch.csv', 'w', encoding='utf-8', newline='') as f:
+    for item in lunch.items():
+        # f.write(','.join(zip(k,v))
+        f.write(','.join(item) + '\n')
+
+#csv writer 이용
+import csv  #csv 파일 편집
+with open('파일.csv', 'w', encoding='utf-8') as f:
+	약어함수명 = csv.writer(f)
+	for item in 딕셔너리.items():
+		csv_writer.writerow(item)
+		
+#Dictwriter 이용 : key를 fieldnames, value를 row에 매핑하는 객체 생성
+with open('파일.csv', 'w', encoding='utf-8') as f:
+	fieldnames = ['column1', 'column2']     #첫행 열이름 - 딕셔너리 구조에서 키 역할
+	writer = csv.DictWriter(f, fieldnames=fieldnames) #DictWriter 선언
+	writer.writeheader()                              #fieldnames 첫행에 입력하기
+	writer.writerow({'name':'john', 'major':'cs'})    
+    writer.writerow(딕셔너리)           #fieldnames 를 키로, 딕셔너리 형태로 넣어야함
+
+DictWriter(f, fieldnames[, restval='', extrasaction='raise', dialect='excel', *args, **kwds])
+  # restval(디폴트='') = fieldnames 빠졌을때 기록될 값
+  # extrasaction(디폴트='raise') = fieldnames에 없는 키값 입력이 들어오면, ValueError
+                                 #'ignore' 설정시, 그냥 무시
+
+    
+#DictReader : 각 row의 정보를 키가 fieldnames로 정의된 dict로 매핑하는 객체 생성
+with open('파일.csv', 'r', encoding='utf-8') as f:
+    reader=csv.DictReader(f[, fieldnames=None, restkey=None, restval=None, dialect='excel', *arg, **kwds)
+                       #fieldnames 생략하면 첫행을 key값으로 씀
+                       #자료에 fieldnames보다 필드가 더 많으면,
+                          # 나머지는 리스트 형태로 restkey(디폴트 None) 필드에 저장
+                       #자료에 fieldnames보다 필드가 적다면,
+                          # restval(디폴트 None)으로 채워짐 (완전히 빈 행은 건너뜀)
+	for row in reader:
+        print(row['key1'], row['key2'])
+```
+
+
+
+프로젝트.... 1주차
+
+```python
+#shallow copy 조심
+a = {'1': 32}
+b={}
+b.update({'1':a})
+a.clear()    ## 여기를 a={} 로 선언하면 원본은 남아서, b는 유지
+print(b)
+```
