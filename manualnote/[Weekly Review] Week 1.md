@@ -450,3 +450,21 @@ config('TELEGRAM_TOKEN')
 http://www.naver.com:80/  http -> 80포트가 기본.   https -> 443포트가 기본
 
 flattening .. 리스트 안의 리스트를 하나의 리스트로!
+
+
+
+
+
+
+
+## 재정리
+
+flask 에서 url에 변수 입력 받을시,
+
+```python
+@app.route("/Hi/<name>")
+def Hi(name):
+    return render_template('hello.html', name=name)
+```
+
+.html 페이지에서 받아온 변수는 request.args.get('변수명') 으로 정의해야 사용가능.
