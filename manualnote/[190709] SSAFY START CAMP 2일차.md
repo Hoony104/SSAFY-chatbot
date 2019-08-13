@@ -6,6 +6,7 @@
 
 - ### import requests
 
+  - `pip install requests`
   - requests.get(주소) -- http status code
   - requests.get(주소).text -- 페이지 소스
   - requests.get(주소).status_code -- http status code
@@ -14,6 +15,7 @@
 
 - ### import bs4
 
+  - `pip install beatifulsoup4`
   - 페이지 소스에서 쉽게 가져오기 위한 모듈
   - `bs4.BeautifulSoup(requests.get("URL".text,"html.parser").select("검색어")`
   - (파이어폭스 : 요소검사 - 복사 - css선택자 )

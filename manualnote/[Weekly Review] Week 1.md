@@ -190,30 +190,9 @@ TYPORA
 
 
 
-- ### requests
-
-  - `requests.get('url')` -- http status code
-  - `requests.get('url').text`-- 페이지 소스  : 딕셔너리 집합정보 
-  - `requests.get('url').status_code` -- http status code
-  - `requests.get('url').json()` : 제이슨형태로 파싱  @@@@@@@@@@@@@@@@@확인@@@@@@@@
-
-  
-
 - ### pprint
   - `form pprint import pprint`
   - `pprint(제이슨 변수)` 
-
-
-
-- ### bs4
-
-  - 페이지 소스에서 쉽게 조작하기 위한 모듈
-
-  - `bs4.BeautifulSoup(requests.get("URL".text,"html.parser").select("검색어")`
-
-  - 검색어 자리에 (파이어폭스 : 요소검사 - 복사 - css선택자/경로) 복사하여 넣음
-
-    (인터넷은 URL을 매개로 요청/응답 주고받으며, 문서형태임)
 
 
 
@@ -239,6 +218,30 @@ TYPORA
 
 
 ## ※ 사용한 외장함수 (install 필요)
+
+- ### requests
+
+  - `pip install requests`
+  - `requests.get('url')` -- http status code
+  - `requests.get('url').text`-- 페이지 소스  : 딕셔너리 집합정보 
+  - `requests.get('url').status_code` -- http status code
+  - `requests.get('url').json()` : 제이슨형태로 파싱  @@@@@@@@@@@@@@@@@확인@@@@@@@@
+  
+  
+
+- ###  requests
+
+  - `pip install beautifulsoup4`
+
+  - 페이지 소스에서 쉽게 조작하기 위한 모듈
+
+  - `bs4.BeautifulSoup(requests.get("URL".text,"html.parser").select("검색어")`
+
+  - 검색어 자리에 (파이어폭스 : 요소검사 - 복사 - css선택자/경로) 복사하여 넣음
+
+    (인터넷은 URL을 매개로 요청/응답 주고받으며, 문서형태임)
+
+
 
 - ### Faker
 
