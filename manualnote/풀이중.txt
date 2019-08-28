@@ -1,0 +1,26 @@
+for tc in range(1):
+    num,start=map(int,input().split())
+    raw=list(map(int,input().split()))
+    G=[[0]*101 for _ in range(101)]
+    visited=[0]*101
+    for i in range(num//2):
+        G[raw[2*i]][raw[2*i+1]]=1
+    que=[]
+    que.append(start)
+    visited[start]=1
+    nth=0
+    while que:
+        t=que.pop(0)
+        for i in range(101):
+            if visited[i]==0 and G[t][i]!=0:
+                que.append(i)
+                print(t,i,visited[t]+1)
+                visited[i]=visited[t]+1
+                if nth<visited[i]:
+                    nth=visited[i]
+        # print(visited)
+    for i in range(100,-1,-1):
+        if visited[i]==nth:
+            ans=i
+            break
+    print('#{} {}'.format(tc+1,ans))
