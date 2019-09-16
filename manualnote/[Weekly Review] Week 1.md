@@ -376,12 +376,12 @@ TYPORA
 
 `https://api.telegram.org/bot{token}/ (method)` : 텔레그램 api 리퀘스트 포멧
 
-`/getme` : text_id와 text 추출하여 활용
+`/getMe` : text_id와 text 추출하여 활용
  https://api.telegram.org/bot(토큰 붙여넣기)/getme
 
-`/sendmessage` : 메시지 보내기
+`/sendMessage` : 메시지 보내기
 
-`/getupdates` : 최신상태 확인. 웹훅 설정시 안됌
+`/getUpdates` : 최신상태 확인. 웹훅 설정시 안됌
 
 
 
